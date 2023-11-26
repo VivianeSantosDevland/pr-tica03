@@ -3,6 +3,7 @@
     "name": "appRN",
     "slug": "appRN",
     "version": "1.0.0",
+    "main":"./src/App.tsx",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
