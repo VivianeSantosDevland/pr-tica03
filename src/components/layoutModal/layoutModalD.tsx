@@ -27,8 +27,22 @@ interface propsModal{
 
 
 
-/*
+/*-----------------------------
+const styles = StyleSheet.create({
+    green: {
+        borderColor: 'green',
+    },
+    red: {
+        borderColor: 'red',
+    },
+    
+});
 
+<TextInput style={[styles.otpBox, this.state.stateName ?
+    styles.green :
+    styles.red ]} />
+
+    ---------------------------
 const [isOpen, setIsOpen] = useState(false);
 const LayoutModalD: React.ElementType<propsModal> = ({title, children}) =>{
   return(

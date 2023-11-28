@@ -1,8 +1,13 @@
 import { TextInput, StyleSheet, View, SafeAreaView} from "react-native";
+import { LabelD } from "../label";
 
-const TextEditD  = () =>{
+interface propsTxtEdit{
+  textLabel: string
+}
+const TextEditD  = ({textLabel}: propsTxtEdit) =>{
  return(
   <View>
+    <LabelD>{textLabel}</LabelD>
     <TextInput style={styles.input}/>
   </View>
  )}
@@ -19,7 +24,9 @@ const styles = StyleSheet.create({
     //flex: 0.5,
     border: 'solid',
     borderRadius: 10,
-    margin: "auto"
+    margin: "auto",
+    marginTop: 5,
+    marginLeft: 20
   },
   areaView:{
     width: 300,

@@ -8,9 +8,11 @@ interface LabelProps extends TextProps {
  labelFor?: string
 }
 
-const Label: React.ElementType<LabelProps> = ({texto, color, fontSize, labelFor}) =>{
+const LabelD: React.ElementType<LabelProps> = ({texto, color, fontSize, labelFor}) =>{
   return(
-     <Text style={styles.font}>{texto}</Text>
+    <View style={styles.container}>
+      <Text>{texto}</Text>
+    </View>
      
   );
 }
@@ -21,12 +23,19 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: 'blue',
     fontWeight: "500",
-    marginLeft: 20,
+  },
+  container:{
+    backgroundColor: 'yellow',
+    width: 100,
+    height: 50,
+    marginLeft: 5,
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });
 
 
-export {Label}
+export {LabelD}
 /*
 interface labelProps{
   fontSize?: number,

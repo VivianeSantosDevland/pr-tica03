@@ -8,12 +8,12 @@ import { LabelD } from "./src/components/label";
 import { TextEdit } from "./src/components/textEdit/textEdit";
 import { ButtonD } from "./src/components/layoutModal/button/buttonD";
 import { TextEditD } from "./src/components/textEdit/textEditD";
+import { LayoutSplitterD } from "./src/components/layoutSpliter/layoutSpliterD";
  function App() {
   return (
 
     <View>
-      <LabelD>A vida não é um morango</LabelD>
-      <TextEditD></TextEditD>
+      <LayoutSplitterD></LayoutSplitterD>
     </View>
   );
 }
@@ -31,7 +31,7 @@ export default (App);
  // <Text>Testando modal</Text>
  // </LayoutModalD>
  //  <ButtonD title="Clique" pressOn={beta}></ButtonD>
-
+//<TextEditD textLabel="Nome:"></TextEditD>
 const styles = StyleSheet.create({
   container: {
     flex: 1,
