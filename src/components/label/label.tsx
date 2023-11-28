@@ -1,23 +1,24 @@
 import {LabelStyle, Texto} from './label.styles'
 import {View, Text, StyleSheet} from 'react-native';
 
+interface LabelProps{
+ children: string
+}
 
-
-const Label= (content:string) =>{
+const Label: React.ElementType<LabelProps> = ({children}) =>{
   return(
-     <Text style={styles.colorText}></Text>
+     <Text style={styles.font}>{children}</Text>
   );
 }
 
 
 const styles = StyleSheet.create({
-  fontSize: {
-    fontSize: 20,
-    color: 'blue'
-  },
-  colorText: {
-    color: 'red',
-  },
+  font: {
+    fontSize: 16,
+    color: 'blue',
+    fontWeight: "500",
+    marginLeft: 20,
+  }
 });
 
 
