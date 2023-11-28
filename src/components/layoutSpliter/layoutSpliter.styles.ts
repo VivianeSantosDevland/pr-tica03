@@ -1,13 +1,11 @@
 
 import styled from 'styled-components/native';
 
-import { height, width, cor, orientacao } from './layoutSplitter';
+import { height, width, cor, orientacao } from './layoutSplitter_';
 
 export const Container = styled.View`
 background-color: #000000;
 `;
-
-export const box = styled.View``;
 
 
 

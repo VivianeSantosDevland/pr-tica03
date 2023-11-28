@@ -1,1 +1,1 @@
-export *from './layoutSpliter';
+export *from './layoutSpliter'
