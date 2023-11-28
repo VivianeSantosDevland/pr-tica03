@@ -12,9 +12,8 @@ import { LayoutSplitterD } from "./src/components/layoutSpliter/layoutSpliterD";
  function App() {
   return (
 
-    <View>
-      <LayoutSplitterD></LayoutSplitterD>
-    </View>
+      <LayoutSplitterD orientacao></LayoutSplitterD>
+    
   );
 }
 
