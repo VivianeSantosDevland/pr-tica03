@@ -5,12 +5,25 @@ import {View, Text, StyleSheet, Modal} from 'react-native';
 import { Buttonbtn } from './button';
 import { ButtonD } from './button/buttonD';
 import {useState} from 'react';
-
+const [isOpen, setIsOpen] = useState(false);
 interface propsModal{
+
   title?: string, 
   children?: any 
 }
 
+function ModalD({title, children}: propsModal){
+ return(
+  <View>
+    <ButtonD title='Abrir' pressOn={setIsOpen(!isOpen)}></ButtonD>
+    if (isOpen) {
+      <View>
+        <Text>{title}</Text>
+      </View>
+    }
+</View>
+ );
+}
 
  const styles = StyleSheet.create({
   boxModal:{
@@ -22,6 +35,9 @@ interface propsModal{
   },
   boxModalClose:{
     display: 'none'
+  },
+  textTitleModal:{
+    
   }
 })
 
