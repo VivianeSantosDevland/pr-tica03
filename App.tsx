@@ -1,29 +1,37 @@
 
-import { View } from "react-native";
+import { View, Text, Modal } from "react-native";
 import { LayoutSplitter, LayoutSpl } from "./src/components/layoutSpliter";
 //import { Label, LabelTarget} from "./src/components/label";
 import { LayoutModal } from "./src/components/layoutModal/layoutModal";
 import { Buttonbtn } from "./src/components/layoutModal/button";
-import { Label } from "./src/components/label";
+import { LabelD } from "./src/components/label";
 import { TextEdit } from "./src/components/textEdit/textEdit";
 import { ButtonD } from "./src/components/layoutModal/button/buttonD";
+import { TextEditD } from "./src/components/textEdit/textEditD";
  function App() {
   return (
+
+    <View>
+      <LabelD>A vida não é um morango</LabelD>
+      <TextEditD></TextEditD>
+    </View>
+  );
+}
+
+export default (App);
+
+
+/*
 //<LayoutSplitter></LayoutSplitter>
 //<LayoutModal></LayoutModal>
 //<Buttonbtn>Click here!</Buttonbtn>
 //<Label>Hello world!</Label>
-<>
-<TextEdit/>
-<ButtonD title="Clique" pressOn={beta}></ButtonD>
-</>
-  );
-}
-function beta(){
-  alert('Hellooooooo');
- }
-export default (App);
-/*
+//<TextEdit/>
+//<LayoutModalD title="Título aqui">
+ // <Text>Testando modal</Text>
+ // </LayoutModalD>
+ //  <ButtonD title="Clique" pressOn={beta}></ButtonD>
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,

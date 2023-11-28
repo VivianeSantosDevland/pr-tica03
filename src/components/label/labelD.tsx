@@ -1,13 +1,17 @@
 import {LabelStyle, Texto} from './label.styles'
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, TextProps} from 'react-native';
 
-interface LabelProps{
- children: string
+interface LabelProps extends TextProps {
+ texto: string, 
+ color?: string,
+ fontSize?: number,
+ labelFor?: string
 }
 
-const LabelD: React.ElementType<LabelProps> = ({children}) =>{
+const Label: React.ElementType<LabelProps> = ({texto, color, fontSize, labelFor}) =>{
   return(
-     <Text style={styles.font}>{children}</Text>
+     <Text style={styles.font}>{texto}</Text>
+     
   );
 }
 
@@ -22,7 +26,7 @@ const styles = StyleSheet.create({
 });
 
 
-export {LabelD}
+export {Label}
 /*
 interface labelProps{
   fontSize?: number,

@@ -17,7 +17,7 @@ const ButtonD: React.ElementType<ButtonProps> = ({title}) =>{
 const ButtonD: React.ElementType<ButtonProps> = ({title, pressOn}) =>{
   return(
    <Pressable style={styles.button} onPress={pressOn}>
-    <Text style={styles.buttonText}>Hello</Text>
+    <Text style={styles.buttonText}>{title}</Text>
    </Pressable>
   );
  }
