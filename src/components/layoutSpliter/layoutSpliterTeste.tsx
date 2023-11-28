@@ -3,16 +3,18 @@ import  styled  from 'styled-components/native';
 import { Container} from './layoutSpliter.styles';
 import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
+import { BoxSplitterD } from './boxSplitter';
 
 interface LayoutSplitterProps{
   orientacao?: boolean,
-  tamanhoBox1: number,
-  tamanhoBox2: number,
-  children?: any
+  children?: any,
 };
 
 
-function LayoutSplitterD({orientacao, tamanhoBox1, tamanhoBox2, children}: LayoutSplitterProps) {
+function LayoutSplitterD_({
+  orientacao,
+  children,
+}: LayoutSplitterProps) {
  return(
   <View style={{
     //height: 620,
@@ -21,18 +23,7 @@ function LayoutSplitterD({orientacao, tamanhoBox1, tamanhoBox2, children}: Layou
     flex:1, 
     flexDirection: orientacao ? 'column' : 'row',
   }}>
-    <View style={{
-      backgroundColor: '#410751',
-      flex: tamanhoBox1,
-    }}>
-      {children}
-    </View>
-    <View style={{
-       backgroundColor: '#26003A',
-       flex: tamanhoBox2,
-    }}>
-      {children}
-    </View>
+    {children}
   </View>
  );
 }
@@ -60,9 +51,13 @@ function BoxSplitter(){
 
 
 
-export {LayoutSplitterD, BoxSplitter}
+export {LayoutSplitterD_, BoxSplitter}
 
 /*
+
+<BoxSplitterD tamanhoBox={tamanhoBox1} background={background1}>{children}</BoxSplitterD>
+    <BoxSplitterD tamanhoBox={tamanhoBox2} background={background2}>{children_}</BoxSplitterD>
+
 function LayoutSplitterD({orientacao, tamanhoBox1, tamanhoBox2, children}: LayoutSplitterProps) {
  return(
   <View style={{

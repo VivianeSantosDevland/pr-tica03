@@ -4,42 +4,26 @@ import { Container} from './layoutSpliter.styles';
 import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
 
-interface LayoutSplitterProps{
-  orientacao?: boolean,
-  tamanhoBox1: number,
-  tamanhoBox2: number,
+interface BoxSplitterProps{
+  tamanhoBox: number,
+  background: string,
   children?: any
 };
 
 
-function LayoutSplitterD({orientacao, tamanhoBox1, tamanhoBox2, children}: LayoutSplitterProps) {
+function BoxSplitterD({tamanhoBox, children, background}: BoxSplitterProps) {
  return(
-  <View style={{
-    //height: 620,
-    padding: 10, 
-    backgroundColor: '#000000',
-    flex:1, 
-    flexDirection: orientacao ? 'column' : 'row',
-  }}>
+ 
     <View style={{
-      backgroundColor: '#410751',
-      flex: tamanhoBox1,
-    }}>
+      backgroundColor: background,//#410751'
+      flex: tamanhoBox,}}>
       {children}
     </View>
-    <View style={{
-       backgroundColor: '#26003A',
-       flex: tamanhoBox2,
-    }}>
-      {children}
-    </View>
-  </View>
+    
+
  );
 }
-function BoxSplitter(){
-  return(
-    <Container></Container>
-  )};
+
 
   const styles = StyleSheet.create({
     container:{
@@ -60,7 +44,7 @@ function BoxSplitter(){
 
 
 
-export {LayoutSplitterD, BoxSplitter}
+export {BoxSplitterD}
 
 /*
 function LayoutSplitterD({orientacao, tamanhoBox1, tamanhoBox2, children}: LayoutSplitterProps) {
