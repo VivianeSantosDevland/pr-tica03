@@ -5,45 +5,98 @@ import {View, Text, StyleSheet, Modal} from 'react-native';
 import { Buttonbtn } from './button';
 import { ButtonD } from './button/buttonD';
 import {useState} from 'react';
-const [isOpen, setIsOpen] = useState(false);
+
+
+
 interface propsModal{
 
   title?: string, 
   children?: any 
 }
 
-function ModalD({title, children}: propsModal){
- return(
-  <View>
-    <ButtonD title='Abrir' pressOn={setIsOpen(!isOpen)}></ButtonD>
-    if (isOpen) {
-      <View>
-        <Text>{title}</Text>
+function LayoutModalD({
+  title,
+  children,
+}: propsModal) {
+  const [isVisible, setIsVisible] = useState(true);
+  
+  if(!isVisible){
+    return(
+      <View style={styles.boxModal}>
+        <View>
+          <Text style={styles.textTitleModal}>{title}</Text>
+        </View>
+        {children}
+        <ButtonD title='Fechar' pressOn={setIsVisible(!isVisible)}></ButtonD>
       </View>
-    }
-</View>
- );
+     );
+  }else{
+    return(
+      <ButtonD title='Fechar' pressOn={setIsVisible(!isVisible)}></ButtonD>
+    )
+  }
 }
+/*
+function BtnModal(){
+  return(
+    <View style={styles.viewBtnModalClosed}>
+      <ButtonD title='Fechar' pressOn={setIsVisible(!isVisible)}></ButtonD>
+    </View>
+  );
+}*/
 
  const styles = StyleSheet.create({
   boxModal:{
     backgroundColor: "#26003A",
-    flex:0.5, 
+    flex:1, 
+    flexDirection: 'row',
     margin: 'auto', 
     height: 500, 
     borderRadius: 8,
+    justifyContent: 'center',
+   
   },
   boxModalClose:{
     display: 'none'
   },
   textTitleModal:{
-    
+    color: '#fafafa',
+    fontWeight:"600",
+    fontSize: 18,
+    margin: 'auto'
+  },
+  viewTitle:{
+    flex: 0.1,
+    height: 100
+  },
+  viewBtnModalClosed:{
+    height: 500,
+    width: 1000,
+    margin: 'auto'
   }
-})
+});
+
+export {LayoutModalD}
+
 
 
 
 /*-----------------------------
+<ButtonD title='Abrir' pressOn={setIsOpen(!isOpen)}></ButtonD>
+    {children}
+
+if (isOpen) {
+      <View>
+        <Text style={styles.textTitleModal}>{title}</Text>
+        {children}
+        <ButtonD title='Fechar' pressOn={setIsOpen(!isOpen)}></ButtonD>
+      </View>
+    }else{
+      <></>
+    }
+
+
+
 const styles = StyleSheet.create({
     green: {
         borderColor: 'green',

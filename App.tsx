@@ -10,21 +10,14 @@ import { ButtonD } from "./src/components/layoutModal/button/buttonD";
 import { TextEditD } from "./src/components/textEdit/textEditD";
 import { BoxSplitter, LayoutSplitterD } from "./src/components/layoutSpliter/layoutSpliterD";
 import { LayoutSplitterD_ } from "./src/components/layoutSpliter/layoutSpliterTeste";
-import {BoxSplitterD} from './src/components/layoutSpliter/boxSplitter'
+import {BoxSplitterD} from './src/components/layoutSpliter/boxSplitter';
+import { LayoutModalD } from "./src/components/layoutModal/layoutModalD";
+
  function App() {
   return (
-
-      <LayoutSplitterD_ orientacao={false}>
-        <BoxSplitterD tamanhoBox={0.2} background="#410751">
-          <Text style={{color: "#ffffff", fontSize:20, margin: "auto"}}>Este é o box ummmmmmmm</Text>
-        </BoxSplitterD>
-        <BoxSplitterD tamanhoBox={0.8} background="#26003A">
-          <Text style={{color: "#ffffff", fontSize:20, margin: "auto"}}>Este é o box doiiiiiiiiiiiissssssssss</Text>
-        </BoxSplitterD>
-      </LayoutSplitterD_>
-   
-      
-    
+    <View>
+     <LayoutModalD></LayoutModalD>
+    </View>
   );
 }
 
@@ -32,6 +25,23 @@ export default (App);
 
 
 /*
+
+<LayoutModalD title="Este é um modal"></LayoutModalD>
+
+<LayoutSplitterD_ orientacao={false}>
+        <BoxSplitterD tamanhoBox={0.2} background="#410751">
+          <Text style={{color: "#ffffff", fontSize:20, margin: "auto"}}>Este é o box ummmmmmmm</Text>
+        </BoxSplitterD>
+        <BoxSplitterD tamanhoBox={0.8} background="#26003A">
+          <Text style={{color: "#ffffff", fontSize:20, margin: "auto"}}>Este é o box doiiiiiiiiiiiissssssssss</Text>
+        </BoxSplitterD>
+      </LayoutSplitterD_>
+
+
+
+
+
+
 <LayoutSplitterD tamanhoBox1={0.2} tamanhoBox2={0.8} orientacao={true}>
         
       </LayoutSplitterD>
