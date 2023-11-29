@@ -23,9 +23,11 @@ function LayoutModalD({
       <View>
         <Modal
          visible={isVisible}
+         animationType='fade'
          onRequestClose={() =>{
          setIsVisible(!isVisible)}}>
-          <View style={styles.boxModal}>             
+          <View style={styles.boxModal}>
+            <Text style={styles.textTitleModal}>{title}</Text>             
               {children}
               <ButtonD title='Fechar' pressOn={() =>{
               setIsVisible(!isVisible)}}></ButtonD>
@@ -50,14 +52,16 @@ function BtnModal(){
 
  const styles = StyleSheet.create({
   boxModal:{
-    backgroundColor: "#26003A",
+    backgroundColor: "#f1f2f3",
     flex:1, 
-    flexDirection: 'row',
+    flexDirection: 'column',
     margin: 'auto', 
     height: 500,
     width: 500, 
     borderRadius: 8,
     justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: 20,
    
   },
   boxModalClosed:{
@@ -70,9 +74,9 @@ function BtnModal(){
     justifyContent: 'center',
   },
   textTitleModal:{
-    color: '#fafafa',
+    color: '#020202',
     fontWeight:"600",
-    fontSize: 18,
+    fontSize: 22,
     margin: 'auto'
   },
   viewTitle:{

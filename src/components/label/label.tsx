@@ -15,7 +15,7 @@ const LabelD: React.ElementType<LabelProps> = ({children}) =>{
 const styles = StyleSheet.create({
   font: {
     fontSize: 16,
-    color: 'blue',
+    color: '#000000',
     fontWeight: "500",
     marginLeft: 20,
   }

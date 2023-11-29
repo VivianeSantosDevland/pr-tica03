@@ -21,7 +21,7 @@ const LabelD: React.ElementType<LabelProps> = ({texto, color, fontSize, labelFor
 const styles = StyleSheet.create({
   font: {
     fontSize: 16,
-    color: 'blue',
+    color: '#000000',
     fontWeight: "500",
   },
   container:{
