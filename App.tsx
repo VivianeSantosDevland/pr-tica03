@@ -16,7 +16,7 @@ import { LayoutModalD } from "./src/components/layoutModal/layoutModalD";
 
  function App() {
   return (
-     <LayoutSplitterD_ orientacao={true}>
+     <LayoutSplitterD_ orientacao={false}>
         <BoxSplitterD tamanhoBox={0.3} background="#410751">
           <Text style={{color: "#ffffff", fontSize:20, margin: "auto"}}>Este é o box ummmmmmmm</Text>
           <View style={styles.viewBtn}>
@@ -27,7 +27,6 @@ import { LayoutModalD } from "./src/components/layoutModal/layoutModalD";
               <TextEditD textLabel="Endereço:"></TextEditD>
               <TextEditD textLabel="CEP:"></TextEditD>
             </LayoutModalD>
-            <LabelD>Este é um label</LabelD>
           </View>
         </BoxSplitterD>
         <BoxSplitterD tamanhoBox={0.8} background="#26003A">

@@ -29,8 +29,8 @@ function LayoutModalD({
           <View style={styles.boxModal}>
             <Text style={styles.textTitleModal}>{title}</Text>             
               {children}
-              <ButtonD title='Fechar' pressOn={() =>{
-              setIsVisible(!isVisible)}}></ButtonD>
+                <ButtonD title='Fechar' pressOn={() =>{
+                setIsVisible(!isVisible)}}></ButtonD>  
           </View>
       </Modal>      
         <View style={styles.boxModalClosed}>
@@ -56,7 +56,7 @@ function BtnModal(){
     flex:1, 
     flexDirection: 'column',
     margin: 'auto', 
-    height: 500,
+    height: 400,
     width: 500, 
     borderRadius: 8,
     justifyContent: 'center',
@@ -87,7 +87,8 @@ function BtnModal(){
     height: 500,
     width: 1000,
     margin: 'auto'
-  }
+  },
+
 });
 
 export {LayoutModalD}

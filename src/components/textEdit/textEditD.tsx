@@ -15,11 +15,11 @@ const TextEditD  = ({textLabel}: propsTxtEdit) =>{
 
 const styles = StyleSheet.create({
   input:{
-    color: '#00000',
+    color: '#141515',
     fontSize: 16,
     width: 250,
     height: 40,
-    borderColor: '#000000',
+    borderColor: '#33A0AA',
     borderBottomWidth: 1,
     //flex: 0.5,
     border: 'solid',
