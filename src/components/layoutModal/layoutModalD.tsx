@@ -30,10 +30,11 @@ function LayoutModalD({
               <ButtonD title='Fechar' pressOn={() =>{
               setIsVisible(!isVisible)}}></ButtonD>
           </View>
-      </Modal>
-      
+      </Modal>      
+        <View style={styles.boxModalClosed}>
         <ButtonD title='Abrir' pressOn={() =>{
           setIsVisible(true)}}></ButtonD>
+        </View>
       </View>
      );
   
@@ -53,13 +54,20 @@ function BtnModal(){
     flex:1, 
     flexDirection: 'row',
     margin: 'auto', 
-    height: 500, 
+    height: 500,
+    width: 500, 
     borderRadius: 8,
     justifyContent: 'center',
    
   },
-  boxModalClose:{
-    display: 'none'
+  boxModalClosed:{
+    flex:1, 
+    flexDirection: 'row',
+    margin: 'auto', 
+    height: 500, 
+    width: 500, 
+    borderRadius: 8,
+    justifyContent: 'center',
   },
   textTitleModal:{
     color: '#fafafa',
