@@ -18,24 +18,26 @@ function LayoutModalD({
   title,
   children,
 }: propsModal) {
-  const [isVisible, setIsVisible] = useState(true);
-  
-  if(!isVisible){
+  const [isVisible, setIsVisible] = useState(false);
     return(
-      <View style={styles.boxModal}>
-        <View>
-          <Text style={styles.textTitleModal}>{title}</Text>
-        </View>
-        {children}
-        <ButtonD title='Fechar' pressOn={setIsVisible(!isVisible)}></ButtonD>
+      <View>
+        <Modal
+         visible={isVisible}
+         onRequestClose={() =>{
+         setIsVisible(!isVisible)}}>
+          <View style={styles.boxModal}>             
+              {children}
+              <ButtonD title='Fechar' pressOn={() =>{
+              setIsVisible(!isVisible)}}></ButtonD>
+          </View>
+      </Modal>
+      
+        <ButtonD title='Abrir' pressOn={() =>{
+          setIsVisible(true)}}></ButtonD>
       </View>
      );
-  }else{
-    return(
-      <ButtonD title='Fechar' pressOn={setIsVisible(!isVisible)}></ButtonD>
-    )
-  }
-}
+  
+};
 /*
 function BtnModal(){
   return(
@@ -82,6 +84,12 @@ export {LayoutModalD}
 
 
 /*-----------------------------
+ <View>
+          <Text style={styles.textTitleModal}>{title}</Text>
+        </View>
+        {children}
+        <ButtonD title='Fechar' pressOn={setIsVisible(!isVisible)}></ButtonD>
+
 <ButtonD title='Abrir' pressOn={setIsOpen(!isOpen)}></ButtonD>
     {children}
 
