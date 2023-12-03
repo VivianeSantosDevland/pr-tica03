@@ -5,7 +5,6 @@ import { LayoutSplitter, LayoutSpl } from "./src/components/layoutSpliter";
 import { LayoutModal } from "./src/components/layoutModal/layoutModal";
 import { Buttonbtn } from "./src/components/layoutModal/button";
 import { LabelD } from "./src/components/label";
-import { TextEdit } from "./src/components/textEdit/textEdit";
 import { ButtonD } from "./src/components/layoutModal/button/buttonD";
 import { TextEditD } from "./src/components/textEdit/textEditD";
 import { BoxSplitter, LayoutSplitterD } from "./src/components/layoutSpliter/layoutSpliterD";
