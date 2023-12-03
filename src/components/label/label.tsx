@@ -1,5 +1,5 @@
 import {styles} from './label.styles'
-import {View, Text, StyleSheet} from 'react-native';
+import {Text} from 'react-native';
 
 interface LabelProps{
  children: string
