@@ -1,7 +1,7 @@
 
 import  styled  from 'styled-components/native';
 import {View, Text, StyleSheet} from 'react-native';
-import { Buttonbtn } from './button';
+import { Buttonbtn } from '../button';
 
 
 

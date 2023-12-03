@@ -1,13 +1,6 @@
 
-import { View, Text, Modal, StyleSheet} from "react-native";
-import { LayoutSplitter, LayoutSpl } from "./src/components/layoutSpliter";
-//import { Label, LabelTarget} from "./src/components/label";
-import { LayoutModal } from "./src/components/layoutModal/layoutModal";
-import { Buttonbtn } from "./src/components/layoutModal/button";
-import { LabelD } from "./src/components/label";
-import { ButtonD } from "./src/components/layoutModal/button/buttonD";
+import { View, Text, StyleSheet} from "react-native";
 import { TextEditD } from "./src/components/textEdit/textEditD";
-import { BoxSplitter, LayoutSplitterD } from "./src/components/layoutSpliter/layoutSpliterD";
 import { LayoutSplitterD_ } from "./src/components/layoutSpliter/layoutSpliterTeste";
 import {BoxSplitterD} from './src/components/layoutSpliter/boxSplitter';
 import { LayoutModalD } from "./src/components/layoutModal/layoutModalD";

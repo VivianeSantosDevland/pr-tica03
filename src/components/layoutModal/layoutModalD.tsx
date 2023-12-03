@@ -1,9 +1,6 @@
 /*  Este componente deve oferecer possibilidade de apresentar uma caixa de diálogo modal com no mínimo um botão "close(fechar)". O componente deve acomodar um ou mais componentes*/
-
-import  styled  from 'styled-components/native';
 import {View, Text, StyleSheet, Modal} from 'react-native';
-import { Buttonbtn } from './button';
-import { ButtonD } from './button/buttonD';
+import { ButtonD } from '../button/buttonD';
 import {useState} from 'react';
 
 
