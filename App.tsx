@@ -1,7 +1,7 @@
 
 import { View, Text, StyleSheet} from "react-native";
 import { TextEditD } from "./src/components/textEdit/textEditD";
-import { LayoutSplitterD_ } from "./src/components/layoutSpliter/layoutSpliterTeste";
+import { LayoutSplitterD_ } from "./src/components/layoutSpliter/layoutSpliterD_";
 import {BoxSplitterD} from './src/components/layoutSpliter/boxSplitter';
 import { LayoutModalD } from "./src/components/layoutModal/layoutModalD";
 

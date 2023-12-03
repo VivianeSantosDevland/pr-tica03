@@ -1,12 +1,9 @@
-
-import  styled  from 'styled-components/native';
-import { Container} from './layoutSpliter.styles';
 import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
 
 interface BoxSplitterProps{
   tamanhoBox: number,
-  background: string,
+  background?: string,
   children?: any
 };
 
@@ -15,7 +12,7 @@ function BoxSplitterD({tamanhoBox, children, background}: BoxSplitterProps) {
  return(
  
     <View style={{
-      backgroundColor: background,//#410751'
+      backgroundColor: background,
       flex: tamanhoBox,}}>
       {children}
     </View>
@@ -23,25 +20,6 @@ function BoxSplitterD({tamanhoBox, children, background}: BoxSplitterProps) {
 
  );
 }
-
-
-  const styles = StyleSheet.create({
-    container:{
-      height: 600, 
-      backgroundColor: '#000000',
-      flex:1, 
-      flexDirection: 'row',
-    },
-    box1:{
-      backgroundColor: '#410751',
-       flex:0.3,
-    },
-    box2:{
-      backgroundColor: '#26003A',
-       flex:0.7,
-    }
-  })
-
 
 
 export {BoxSplitterD}
