@@ -1,14 +1,12 @@
-import  styled from 'styled-components/native';
+import  {StyleSheet} from 'react-native'
 
-const LabelStyle = styled.Text`
-font-size: 20;
-color: blue;
-`;
+const styles = StyleSheet.create({
+  font: {
+    fontSize: 16,
+    color: '#000000',
+    fontWeight: "500",
+    marginLeft: 20,
+  }
+});
 
-const Texto = styled.Text`
-  font-size: 18px;
-  color: blue;
-  font-weight: 500;
-`;
-
-export {LabelStyle, Texto}
+export {styles}
